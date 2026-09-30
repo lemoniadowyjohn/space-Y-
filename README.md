@@ -2,33 +2,11 @@
 
 > **Repository slug note:** `space-Y-` is historical. The project presented on the default branch is the **Governed Agent Workflow Demo**. The prior coursework landing page is preserved on the `legacy-space-y-coursework` branch.
 
-A compact Python portfolio project demonstrating policy-aware task routing, provider health/quota checks, deterministic fallback, evidence-rich execution attempts and explicit human approval for high-risk tool actions.
-
-![Demo](docs/demo.svg)
+A compact Python portfolio project demonstrating policy-aware task routing, provider health/quota checks, deterministic fallback, inspectable execution attempts and explicit human approval for high-risk side effects.
 
 ## Problem
 
 Agent workflows can appear successful while silently routing to unavailable providers, crossing approval boundaries or hiding fallback failures. This project makes those decisions explicit and testable.
-
-## Architecture
-
-```text
-Task
-  |
-policy gate ---- high-risk action ----> human approval required
-  |
-capability + health + quota filter
-  |
-free-first deterministic routing
-  |
-provider attempt
-  | failure
-  +----------------> mark unhealthy -> fallback
-  |
-success
-  |
-structured execution result + attempt history
-```
 
 ## Demonstrated controls
 
@@ -36,7 +14,7 @@ structured execution result + attempt history
 - provider health and quota gates;
 - free-provider preference;
 - deterministic fallback after provider failure;
-- high-risk tool approval boundary;
+- high-risk approval boundary;
 - blocked state when no provider is eligible;
 - inspectable attempt history;
 - pytest regression tests and GitHub Actions CI.
@@ -53,6 +31,6 @@ python examples/demo.py
 
 ## Claim boundary
 
-This is a sanitized portfolio implementation based on agent-orchestration engineering concepts. It is not presented as an enterprise production LLM platform, commercial deployment, autonomous trading system or senior AI architecture. No private agent configuration, credentials or employer/customer data are included.
+This is a sanitized portfolio implementation based on agent-orchestration engineering concepts. It is not presented as an enterprise production LLM platform, commercial deployment or senior AI architecture. No private agent configuration, credentials or employer/customer data are included.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md), [LIMITATIONS.md](LIMITATIONS.md) and [SECURITY.md](SECURITY.md).
