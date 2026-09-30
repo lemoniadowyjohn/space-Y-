@@ -1,5 +1,58 @@
-# Archived coursework — Space Y
+# Governed Agent Workflow Demo
 
-This is an older learning/coursework repository and is **not part of my current professional portfolio**.
+> **Repository slug note:** `space-Y-` is historical. The project presented on the default branch is the **Governed Agent Workflow Demo**. The prior coursework landing page is preserved on the `legacy-space-y-coursework` branch.
 
-It is retained for historical traceability. Current professional evidence is centered on process automation, Python/data automation, industrial quality/validation, applied-AI workflow R&D, and CARLA/OpenDRIVE map-quality work.
+A compact Python portfolio project demonstrating policy-aware task routing, provider health/quota checks, deterministic fallback, evidence-rich execution attempts and explicit human approval for high-risk tool actions.
+
+![Demo](docs/demo.svg)
+
+## Problem
+
+Agent workflows can appear successful while silently routing to unavailable providers, crossing approval boundaries or hiding fallback failures. This project makes those decisions explicit and testable.
+
+## Architecture
+
+```text
+Task
+  |
+policy gate ---- high-risk action ----> human approval required
+  |
+capability + health + quota filter
+  |
+free-first deterministic routing
+  |
+provider attempt
+  | failure
+  +----------------> mark unhealthy -> fallback
+  |
+success
+  |
+structured execution result + attempt history
+```
+
+## Demonstrated controls
+
+- capability-based routing;
+- provider health and quota gates;
+- free-provider preference;
+- deterministic fallback after provider failure;
+- high-risk tool approval boundary;
+- blocked state when no provider is eligible;
+- inspectable attempt history;
+- pytest regression tests and GitHub Actions CI.
+
+## Run
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+pytest -q
+python examples/demo.py
+```
+
+## Claim boundary
+
+This is a sanitized portfolio implementation based on agent-orchestration engineering concepts. It is not presented as an enterprise production LLM platform, commercial deployment, autonomous trading system or senior AI architecture. No private agent configuration, credentials or employer/customer data are included.
+
+See [ARCHITECTURE.md](ARCHITECTURE.md), [LIMITATIONS.md](LIMITATIONS.md) and [SECURITY.md](SECURITY.md).
