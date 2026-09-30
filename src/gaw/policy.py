@@ -21,7 +21,7 @@ class PolicyDecision:
 
 
 def evaluate(task: Task, approved: bool = False) -> PolicyDecision:
-    high_risk = task.risk.lower() == "high" or task.tool in HIGH_RISK_TOOLS
+    high_risk = task.risk.lower() == "high" or task.action in HIGH_RISK_TOOLS
     if high_risk and not approved:
         return PolicyDecision(False, True, "human approval required")
     return PolicyDecision(True, False, "policy passed")

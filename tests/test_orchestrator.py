@@ -70,3 +70,11 @@ def test_capability_mismatch_is_not_routed():
     orch = Orchestrator([provider], {"free": lambda t: "never"})
     result = orch.run(task(capability="analysis"))
     assert result.status == "blocked"
+
+
+def test_named_high_risk_action_requires_approval():
+    provider = ProviderState("free", {"analysis"})
+    orch = Orchestrator([provider], {"free": lambda t: "executed"})
+    pending = orch.run(task(action="delete_file", risk="low"))
+    assert pending.status == "awaiting_approval"
+    assert pending.reasons == ("human approval required",)
