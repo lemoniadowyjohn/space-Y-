@@ -244,3 +244,13 @@ Only behavior present and testable in this public repository should be described
 
 - [Industrial Quality Documentation Assistant](https://github.com/lemoniadowyjohn/hermes) — industrial RAG portfolio project using synthetic data and evidence-grounded validation.
 - [CARLA Control Suite / map-quality portfolio work](https://github.com/lemoniadowyjohn/carla-control-suite) — automotive simulation, geospatial validation and reproducibility work.
+
+
+## Portfolio navigation
+
+- [Engineering portfolio matrix](PORTFOLIO_MATRIX.md) — problem, technologies, evidence and target-role mapping across the public portfolio.
+- [Ready-to-publish GitHub profile README](GITHUB_PROFILE_README.md) — concise profile landing copy.
+- [Industrial Quality Documentation Assistant](https://github.com/lemoniadowyjohn/hermes)
+- [CARLA Map Quality Toolkit](https://github.com/lemoniadowyjohn/carla-control-suite)
+- [Python Excel Data Reconciliation Demo](https://github.com/lemoniadowyjohn/space-Y--)
+- [Power Platform Quality App Reference Design](https://github.com/lemoniadowyjohn/watson)
