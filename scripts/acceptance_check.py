@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -21,7 +22,10 @@ TEXT_SUFFIXES = {".py", ".md", ".toml", ".yml", ".yaml", ".json", ".txt", ".exam
 
 
 def run(command: list[str], cwd: Path = ROOT) -> subprocess.CompletedProcess:
-    return subprocess.run(command, cwd=cwd, text=True, capture_output=True)
+    env = os.environ.copy()
+    src = str(ROOT / "src")
+    env["PYTHONPATH"] = src if not env.get("PYTHONPATH") else src + os.pathsep + env["PYTHONPATH"]
+    return subprocess.run(command, cwd=cwd, text=True, capture_output=True, env=env)
 
 
 def scan_secrets() -> list[dict]:
