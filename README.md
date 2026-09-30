@@ -6,6 +6,8 @@
 
 > **Scope:** local prototype / R&D portfolio project. It is **not** an enterprise production AI platform, commercial deployment, large-scale MLOps system, or production LLM platform.
 
+![Governed agent workflow overview](docs/workflow_overview.svg)
+
 ## The problem
 
 Agent workflows can fail silently or claim completion too early: providers become unavailable or rate-limited, structured output is malformed, a model selects a tool it should not use, approval can be stale or replayed, a process can restart after a partial side effect, or a worker can say “done” while the required artifact is missing.
@@ -203,6 +205,7 @@ src/governed_agent/
 tests/               # success + adversarial/failure behavior
 scripts/             # one-command portfolio acceptance
 examples/            # scenario runner
+data/                # synthetic sample task data
 docs/                # architecture, capability matrix, threat model, task pack
 ```
 
@@ -254,3 +257,8 @@ Only behavior present and testable in this public repository should be described
 - [CARLA Map Quality Toolkit](https://github.com/lemoniadowyjohn/carla-control-suite)
 - [Python Excel Data Reconciliation Demo](https://github.com/lemoniadowyjohn/space-Y--)
 - [Power Platform Quality App Reference Design](https://github.com/lemoniadowyjohn/watson)
+
+
+## Synthetic sample data
+
+[`data/sample_tasks.json`](data/sample_tasks.json) contains public-safe example tasks for success, fallback and approval scenarios. It contains no employer/customer data.
