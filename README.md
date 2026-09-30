@@ -34,3 +34,8 @@ python examples/demo.py
 This is a sanitized portfolio implementation based on agent-orchestration engineering concepts. It is not presented as an enterprise production LLM platform, commercial deployment or senior AI architecture. No private agent configuration, credentials or employer/customer data are included.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md), [LIMITATIONS.md](LIMITATIONS.md) and [SECURITY.md](SECURITY.md).
+
+## Related portfolio
+
+- [Industrial Quality Documentation Assistant](https://github.com/lemoniadowyjohn/hermes) — evidence-grounded industrial RAG portfolio project.
+- [CARLA Map Quality Toolkit](https://github.com/lemoniadowyjohn/carla-control-suite/tree/portfolio/carla-map-quality-toolkit-20260930/portfolio/carla-map-quality-toolkit) — automotive/geospatial validation toolkit with CI-backed quality gates.
