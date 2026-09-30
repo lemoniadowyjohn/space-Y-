@@ -9,7 +9,7 @@ class Task:
     task_id: str
     capability: str
     prompt: str
-    tool: str | None = None
+    action: str | None = None
     risk: str = "low"
 
 
