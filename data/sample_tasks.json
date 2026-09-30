@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "id": "SAMPLE-001",
+      "goal": "Create a synthetic quality-summary artifact",
+      "risk": "low",
+      "expected_evidence": "summary.txt"
+    },
+    {
+      "id": "SAMPLE-002",
+      "goal": "Demonstrate provider fallback after a synthetic rate-limit failure",
+      "risk": "low",
+      "expected_evidence": "fallback_result.txt"
+    },
+    {
+      "id": "SAMPLE-003",
+      "goal": "Demonstrate approval gating before a synthetic side effect",
+      "risk": "approval_required",
+      "expected_evidence": "approved_action_receipt.json"
+    }
+  ],
+  "data_policy": "Synthetic portfolio examples only. No employer/customer data."
+}
