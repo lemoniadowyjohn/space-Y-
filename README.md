@@ -1,8 +1,17 @@
 # Governed Agent Workflow Demo
 
+[![CI](https://github.com/lemoniadowyjohn/space-Y-/actions/workflows/ci.yml/badge.svg)](https://github.com/lemoniadowyjohn/space-Y-/actions/workflows/ci.yml)
+
 > **Repository slug note:** `space-Y-` is historical. The project presented on the default branch is the **Governed Agent Workflow Demo**. The prior coursework landing page is preserved on the `legacy-space-y-coursework` branch.
 
 A compact Python portfolio project demonstrating policy-aware task routing, provider health/quota checks, deterministic fallback, inspectable execution attempts and explicit human approval for high-risk side effects.
+
+## Verified baseline
+
+- GitHub Actions: **PASS**
+- automated tests: **6 passing**
+- policy regression coverage includes explicit high-risk action approval
+- synthetic/demo inputs only; no credentials or private agent configuration
 
 ## Problem
 
