@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280">
-<rect width="960" height="280" rx="16" fill="#0d1117"/>
-<text x="30" y="48" fill="#58a6ff" font-family="monospace" font-size="24">Governed Agent Workflow Demo</text>
-<text x="30" y="94" fill="#c9d1d9" font-family="monospace" font-size="18">free-primary → synthetic outage</text>
-<text x="30" y="136" fill="#f2cc60" font-family="monospace" font-size="18">health gate → fallback routing</text>
-<text x="30" y="178" fill="#7ee787" font-family="monospace" font-size="18">free-fallback → completed</text>
-<text x="30" y="222" fill="#8b949e" font-family="monospace" font-size="16">attempt history: failed → success</text>
-</svg>

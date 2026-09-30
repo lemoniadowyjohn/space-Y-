@@ -1,0 +1,100 @@
+{
+  "record": {
+    "task": {
+      "objective": "Create an artifact after provider fallback",
+      "required_artifacts": [
+        "fallback.txt"
+      ],
+      "preferred_provider": null,
+      "allowed_tools": [
+        "artifact.write"
+      ],
+      "approval_required": false,
+      "dry_run": false,
+      "timeout_s": 2.0,
+      "max_retries": 0,
+      "idempotency_key": "demo-fallback",
+      "parent_task_id": null,
+      "task_id": "a933a2be-5ef6-42d3-97cb-311e2f72de15",
+      "created_at": "2026-09-30T12:38:59.876061+00:00"
+    },
+    "status": "complete",
+    "provider_used": "provider-b",
+    "attempts": 2,
+    "fallback_count": 1,
+    "retry_count": 0,
+    "approval_requested": false,
+    "approval_granted": null,
+    "approval_id": null,
+    "failure_kind": null,
+    "message": "verified completion",
+    "receipt": {
+      "task_id": "a933a2be-5ef6-42d3-97cb-311e2f72de15",
+      "provider": "provider-b",
+      "tool_name": "artifact.write",
+      "started_at": "2026-09-30T12:38:59.877589+00:00",
+      "finished_at": "2026-09-30T12:38:59.877912+00:00",
+      "evidence": [
+        {
+          "artifact_path": "fallback.txt",
+          "sha256": "dc6e01311b08cad9975b3394abc915d03c8afa710aaf3b0fd5af316c151da042",
+          "size_bytes": 33,
+          "modified_at": "2026-09-30T12:38:59.877769+00:00"
+        }
+      ],
+      "receipt_sha256": "e86d6e627dedf5017a8484e575b5a06d6bb2e9c04f9bd79406c9df480f42bd42",
+      "notes": [
+        "Create the requested demo artifact."
+      ]
+    },
+    "latency_ms": 1.2362960001155443,
+    "plan_steps": [
+      "validate task contract and tool allowlist",
+      "select an eligible provider",
+      "request structured action",
+      "apply approval policy if required",
+      "execute one authorized tool action",
+      "build evidence receipt",
+      "verify completion criteria"
+    ]
+  },
+  "metrics": {
+    "tasks_total": 1,
+    "tasks_complete": 1,
+    "tasks_failed": 0,
+    "provider_attempts": 2,
+    "provider_failures": 1,
+    "circuit_open_events": 0,
+    "fallback_successes": 1,
+    "tool_calls": 1,
+    "tool_failures": 0,
+    "tool_authorization_failures": 0,
+    "verification_failures": 0,
+    "retries": 0,
+    "approvals_requested": 0,
+    "approvals_denied": 0,
+    "approvals_invalid": 0,
+    "duplicate_executions_blocked": 0,
+    "recovery_blocks": 0,
+    "audit_events": 5,
+    "total_latency_ms": 1.2362960001155443,
+    "task_success_rate": 1.0,
+    "fallback_success_rate": 1.0,
+    "tool_call_success_rate": 1.0,
+    "approval_frequency": 0.0,
+    "average_latency_ms": 1.2362960001155443
+  },
+  "provider_health": {
+    "provider-a": {
+      "health": "degraded",
+      "consecutive_failures": 1,
+      "circuit_open_until": null
+    },
+    "provider-b": {
+      "health": "healthy",
+      "consecutive_failures": 0,
+      "circuit_open_until": null
+    }
+  },
+  "audit_integrity": true
+}

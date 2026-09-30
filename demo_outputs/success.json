@@ -1,0 +1,95 @@
+{
+  "record": {
+    "task": {
+      "objective": "Create a verified demo artifact",
+      "required_artifacts": [
+        "success.txt"
+      ],
+      "preferred_provider": null,
+      "allowed_tools": [
+        "artifact.write"
+      ],
+      "approval_required": false,
+      "dry_run": false,
+      "timeout_s": 2.0,
+      "max_retries": 0,
+      "idempotency_key": "demo-success",
+      "parent_task_id": null,
+      "task_id": "d91a110a-668a-4a4b-bd89-ca694c661f7e",
+      "created_at": "2026-09-30T12:38:59.225426+00:00"
+    },
+    "status": "complete",
+    "provider_used": "provider-a",
+    "attempts": 1,
+    "fallback_count": 0,
+    "retry_count": 0,
+    "approval_requested": false,
+    "approval_granted": null,
+    "approval_id": null,
+    "failure_kind": null,
+    "message": "verified completion",
+    "receipt": {
+      "task_id": "d91a110a-668a-4a4b-bd89-ca694c661f7e",
+      "provider": "provider-a",
+      "tool_name": "artifact.write",
+      "started_at": "2026-09-30T12:38:59.226639+00:00",
+      "finished_at": "2026-09-30T12:38:59.226908+00:00",
+      "evidence": [
+        {
+          "artifact_path": "success.txt",
+          "sha256": "15c0b927ff1e008911b0f70d0b8c9a855eabf19f163074b9eb5a8b37af4f26be",
+          "size_bytes": 32,
+          "modified_at": "2026-09-30T12:38:59.226782+00:00"
+        }
+      ],
+      "receipt_sha256": "ed1c1a68237b31405463cef8fbc5ee96899ccd840020252889062aadae823e86",
+      "notes": [
+        "Create the requested demo artifact."
+      ]
+    },
+    "latency_ms": 0.9472799997638504,
+    "plan_steps": [
+      "validate task contract and tool allowlist",
+      "select an eligible provider",
+      "request structured action",
+      "apply approval policy if required",
+      "execute one authorized tool action",
+      "build evidence receipt",
+      "verify completion criteria"
+    ]
+  },
+  "metrics": {
+    "tasks_total": 1,
+    "tasks_complete": 1,
+    "tasks_failed": 0,
+    "provider_attempts": 1,
+    "provider_failures": 0,
+    "circuit_open_events": 0,
+    "fallback_successes": 0,
+    "tool_calls": 1,
+    "tool_failures": 0,
+    "tool_authorization_failures": 0,
+    "verification_failures": 0,
+    "retries": 0,
+    "approvals_requested": 0,
+    "approvals_denied": 0,
+    "approvals_invalid": 0,
+    "duplicate_executions_blocked": 0,
+    "recovery_blocks": 0,
+    "audit_events": 4,
+    "total_latency_ms": 0.9472799997638504,
+    "task_success_rate": 1.0,
+    "fallback_success_rate": 0.0,
+    "tool_call_success_rate": 1.0,
+    "approval_frequency": 0.0,
+    "average_latency_ms": 0.9472799997638504
+  },
+  "provider_health": {
+    "provider-a": {
+      "health": "healthy",
+      "consecutive_failures": 0,
+      "circuit_open_until": null
+    }
+  },
+  "audit_integrity": true
+}
