@@ -45,7 +45,7 @@ jobs:
         run: python -m build
       - name: Upload build evidence
         if: always() && matrix.python-version == '3.12'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: governed-agent-verification
           path: dist/
