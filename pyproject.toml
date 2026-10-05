@@ -11,7 +11,13 @@ requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6,<1",
+  "mypy>=1.13,<2",
+  "pip-audit>=2.7,<3",
+  "build>=1.2,<2",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -19,6 +25,23 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src/governed_agent"]
+check_untyped_defs = true
+disallow_untyped_defs = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unreachable = true
+show_error_codes = true
 
 [project.scripts]
 governed-agent-demo = "governed_agent.demo:main"
